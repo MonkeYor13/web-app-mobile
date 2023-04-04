@@ -1,0 +1,170 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+body {
+  font-family: "Fira Sans Condensed", sans-serif;
+  background-color: #000;
+}
+
+.contenedor {
+  background-color: white;
+  margin: auto;
+  width: 90%;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+header {
+  width: 100%;
+  background-color: gray;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+}
+
+header img {
+  width: 50px;
+  height: 50px;
+}
+
+header nav a {
+  text-decoration: none;
+  margin-left: 10px;
+  color: red;
+  font-weight: 600;
+}
+
+main {
+  display: flex;
+  background-color: red;
+  width: 70%;
+  height: auto;
+}
+
+.image-article img {
+  width: 100%;
+  /* agregar esto a todas la imagnes para que sean adaptables al hacer responsive */
+  vertical-align: top;
+}
+
+h2 {
+  margin: 30px 10px;
+  font-size: 40px;
+}
+
+main article p {
+  font-size: larger;
+  text-align: justify;
+  margin: 0px 10px;
+  margin-bottom: 20px;
+}
+
+aside {
+  background-color: pink;
+  width: 30%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.box {
+  width: 200px;
+  height: 200px;
+  background-color: blue;
+  margin: 10px 0px;
+}
+
+.box p {
+  text-align: center;
+  color: white;
+  font-size: 30px;
+  font-weight: 400;
+  padding: 75px 0px;
+}
+
+footer {
+  background-color: aqua;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+}
+
+.redes a {
+  margin: 0px 10px;
+  text-decoration: none;
+  color: red;
+  font-weight: 400;
+}
+
+/* responsive */
+
+@media screen and (max-width: 800px) {
+  main {
+    width: 100%;
+  }
+  aside {
+    width: 100%;
+    flex-direction: row;
+    padding: 0px 10px;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  aside {
+    width: 100%;
+    flex-direction: row;
+    padding: 0px 10px;
+  }
+  aside .box {
+    width: 40%;
+  }
+  footer {
+    flex-direction: column;
+  }
+
+  .redes {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    margin-bottom: 10px;
+  }
+  .about p {
+    text-align: center;
+  }
+}
+@media screen and (max-width: 300px) {
+  header {
+    flex-direction: column;
+  }
+
+  nav {
+    margin-top: 20px;
+  }
+  header nav a {
+    margin-left: 10px;
+    color: white;
+    font-weight: 100;
+    font-size: 12px;
+  }
+
+  h2 {
+    margin: 30px 0px;
+    font-size: 20px;
+    text-align: center;
+  }
+
+  main article p {
+    font-size: 14px;
+    text-align: justify;
+    margin: 0px 20px;
+    margin-bottom: 20px;
+  }
+
+  aside {
+    display: none;
+  }
+}
