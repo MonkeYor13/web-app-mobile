@@ -1,0 +1,168 @@
+* {
+  margin: 0px;
+  padding: 0px;
+}
+
+body {
+  font-family: "Fira Sans Condensed", sans-serif;
+  background-color: blueviolet;
+  padding: 20px;
+}
+
+body .contenedor {
+  background-color: #f7f7f7;
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-wrap: wrap;
+  border-radius: 10px;
+}
+
+header {
+  *background-color: red;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  margin: 50px;
+  justify-content: center;
+  align-items: center;
+}
+
+header .logo img {
+  width: 100px;
+}
+
+header nav a {
+  margin-left: 10px;
+  text-decoration: none;
+  color: blueviolet;
+}
+
+article {
+  padding: 0px 10px;
+}
+
+.image-article img {
+  width: 100%;
+  height: auto;
+  vertical-align: top;
+  border-radius: 10px;
+}
+
+h2 {
+  margin: 20px 0px;
+}
+
+article p {
+  font-size: small;
+  text-align: justify;
+}
+
+aside {
+  display: none;
+}
+
+footer {
+  width: 100%;
+  margin-top: 20px;
+  *background-color: red;
+  padding: 10px;
+}
+
+.redes{
+  display: flex;
+  justify-content: center;
+}
+
+footer .redes a{
+  margin-right: 20px;
+  color: blueviolet;
+  text-decoration: none;
+}
+
+footer .about p{
+  margin-top: 10px;
+  color: blueviolet;
+  text-align: center;
+}
+
+/* responsive */
+
+@media screen and ( min-width: 760px ) {
+  header {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  article p {
+    font-size: 30px;
+    text-align: justify;
+  }
+  
+  aside {
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin: 20px 20px;
+  }
+
+  .box {
+    width: 100px;
+    height: 100px;
+    background-color:blueviolet;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .box p {
+    color: white;
+    font-size: 30px;
+  }
+
+  footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+
+@media screen and ( min-width: 930px ) {
+  header nav a {
+    font-size: 30px;
+    margin-left: 50px;
+  }
+  h2{
+  font-size: 30px;
+}
+  main{
+  width: 80%;
+  display: flex;
+  flex-wrap: nowrap;
+}
+aside {
+  width: 20%;
+  flex-direction: column;
+  justify-content: space-around;
+  margin: 0px;
+}
+
+.box {
+  width: 200px;
+  height: 200px;
+}
+
+footer{
+  margin: 20px 0px;
+}
+
+.redes a{
+font-size: 30px;
+}
+
+.about p{
+  font-size: 30px;
+}
+
+}
