@@ -1,0 +1,91 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+
+header{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 2rem;
+  background-color: aliceblue;
+}
+
+.logo{
+  max-width: 5rem;
+}
+
+.nav-list{
+  display: flex;
+  list-style: none;
+  gap: 1rem;
+}
+
+.nav-list li a {
+  text-decoration: none;
+  color: black;
+}
+
+/* a la clase le ponemos una display de none para que no muestre en la screen */
+.abrir-menu,
+.cerrar-menu {
+  display: none;
+}
+
+/* luego vamos al a media Query */
+
+@media screen and (max-width: 550px) {
+  .abrir-menu,
+  .cerrar-menu{
+    display: block;
+    border: 0;
+    
+    background-color: transparent;
+    cursor: pointer;
+  }
+
+  .abrir-menu{
+    color: black;
+    font-size: 1.5rem;
+  }
+  .cerrar-menu{
+    color: white;
+    font-size: 1rem;
+  }
+
+  .nav{
+    /* display: none; */
+    /*si queremos darle animacion debemos quitar display: none y agregar opacity y visibility*/
+    opacity: 0;
+    visibility: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+    gap: 1rem;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0; /*con este hacemos que llegue hata abajo de la pantalla el nav*/
+    background-color: black;
+    padding: 2rem;
+    box-shadow: 0 0 0 100vmax rgba(0, 0, 0, .5);
+  }
+
+  .nav-list{
+    flex-direction: column;
+    align-items: end;
+  }
+
+  .nav-list li a{
+    color: aliceblue;
+  }
+
+  /* ocn esto lo que hacemos es que al hacer click en el boton abrir se le agregue la clase .visible y se pueda ver el menu de opciones, si vamos al html y agregamos esa clase en el nav veran que la podemos ver, pero esa animacion la la debemos hacer es con jS */
+
+  .visible{
+    opacity: 1;
+    visibility: visible;
+  }
+}

@@ -5,9 +5,35 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>menu hamburguesa</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.4/font/bootstrap-icons.css">
   <link rel="stylesheet" href="/menuhamburguesa.css">
 </head>
 <body>
-<script src="/app.js"></script>  
+  <header>
+    <img class="logo" src="/img/m1.png" alt="logo">
+    <!--agragamos una boton pero lo podemos agregar una icono-->
+
+    <!-- <button class="abrir-menu" id="abrir">Abrir</button> -->
+    <button class="abrir-menu" id="abrir"><i class="bi bi-list"></i></button>
+
+
+    <nav class="nav" id="nav">
+      <!-- <button class="cerrar-menu" id="cerrar">cerrar</button> -->
+      <button class="cerrar-menu" id="cerrar"><i class="bi bi-x-lg"></i></button>
+      <ul class="nav-list">
+        <li><a href="#">inicio</a></li>
+        <li><a href="#">Soy</a></li>
+        <li><a href="#">Servicios</a></li>
+        <li><a href="#">Hacemos</a></li>
+        <li><a href="#">Contacto</a></li>
+      </ul>
+    </nav>
+  </header>
+
+
+
+
+
+<script src="/menuhamburguesa.js"></script>  
 </body>
 </html>
